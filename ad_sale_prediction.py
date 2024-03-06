@@ -43,3 +43,16 @@ Y
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
 
+"""# *Feature Scaling*
+we scale our data to make all the features contribute equally to the result
+# Fit_Transform - fit method is calculating the mean and variance of each of the features present in our data
+# Transform - Transform method is transforming all the features using the respective mean and variance,
+# We want our test data to be a completely new and a surprise set for our model
+"""
+
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
+print(X_train)
+
