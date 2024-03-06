@@ -62,3 +62,15 @@ from sklearn.linear_model import LogisticRegression
 model = LogisticRegression(random_state = 0)
 model.fit(X_train, y_train)
 
+"""# *Predicting, wheather new customer with Age & Salary will Buy or Not*"""
+
+age = int(input("Enter New Customer Age: "))
+sal = int(input("Enter New Customer Salary: "))
+newCust = [[age,sal]]
+result = model.predict(sc.transform(newCust))
+print(result)
+if result == 1:
+  print("Customer will Buy")
+else:
+  print("Customer won't Buy")
+
