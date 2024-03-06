@@ -30,3 +30,11 @@ print(dataset)
 print(dataset.shape)
 print(dataset.head(5))
 
+"""# *Segregate Dataset into X(Input/IndependentVariable) & Y(Output/DependentVariable)*"""
+
+X = dataset.iloc[:, :-1].values
+X
+
+Y = dataset.iloc[:, -1].values
+Y
+
