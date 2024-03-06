@@ -38,3 +38,8 @@ X
 Y = dataset.iloc[:, -1].values
 Y
 
+"""# *Splitting Dataset into Train & Test*"""
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
+
