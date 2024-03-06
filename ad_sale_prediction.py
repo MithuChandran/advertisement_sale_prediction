@@ -19,3 +19,14 @@ import numpy as np #to perform array
 # @title Default title text
 from google.colab import files
 uploaded = files.upload()
+
+"""# *Load Dataset*"""
+
+dataset = pd.read_csv('DigitalAd_dataset.csv')
+print(dataset)
+
+"""# *Summarize Dataset*"""
+
+print(dataset.shape)
+print(dataset.head(5))
+
