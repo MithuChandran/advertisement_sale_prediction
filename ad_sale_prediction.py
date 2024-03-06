@@ -79,3 +79,12 @@ else:
 y_pred = model.predict(X_test)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 
+"""# *Evaluating Model - CONFUSION MATRIX*"""
+
+from sklearn.metrics import confusion_matrix, accuracy_score
+cm = confusion_matrix(y_test, y_pred)
+
+print("Confusion Matrix: ")
+print(cm)
+
+print("Accuracy of the Model: {0}%".format(accuracy_score(y_test, y_pred)*100))
