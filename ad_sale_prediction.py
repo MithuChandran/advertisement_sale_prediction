@@ -74,3 +74,8 @@ if result == 1:
 else:
   print("Customer won't Buy")
 
+"""# *Prediction for all Test Data*"""
+
+y_pred = model.predict(X_test)
+print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+
